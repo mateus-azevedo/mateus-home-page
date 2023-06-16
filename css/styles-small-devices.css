@@ -1,2 +1,10 @@
 /* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 40em) {}
+@media only screen and (max-width: 40em) {
+  #social-hyperlinks-group {
+    background-color: red;
+  }
+
+  .social-link {
+    color: white;
+  }
+}

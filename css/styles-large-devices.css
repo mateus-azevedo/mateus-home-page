@@ -1,2 +1,2 @@
 /* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 64em) {}
+@media only screen and (max-width: 64em) {}
