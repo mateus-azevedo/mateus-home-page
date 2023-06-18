@@ -24,3 +24,8 @@ body {
   }
 }
 /* linear-gradient config end */
+
+.social-link {
+  background-color: #ddd9ce;
+  color: black;
+}
