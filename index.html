@@ -38,13 +38,8 @@
   <body>
     <h1>Welcome to my tree</h1>
     <section id="linktree-shape">
-      <div id="profile-picture-container">
-        <img
-          class="profile-picture"
-          src="https://avatars.githubusercontent.com/u/62727807?v=4"
-          alt="Mateus Santos Profile Picture"
-        />
-      </div>
+      <!-- render profile image after html loaded -->
+      <div id="profile-picture-container"></div>
 
       <div id="social-hyperlinks-group">
         <a
@@ -81,5 +76,7 @@
         </a>
       </div>
     </section>
+
+    <script src="js/fetchProfileGithubInfo.js" type="text/javascript"></script>
   </body>
 </html>
