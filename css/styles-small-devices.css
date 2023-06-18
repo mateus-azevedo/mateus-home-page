@@ -1,5 +1,13 @@
 /* Small devices such as large phones (640px and up) */
 @media only screen and (max-width: 40em) {
+  #linktree-shape {}
+  
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+  
   #social-hyperlinks-group {
     display: flex;
     align-items: center;
