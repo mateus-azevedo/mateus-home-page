@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @returns a object with github profile information
  * @example
  *  {
@@ -40,19 +40,19 @@
 async function fetchProfileGithubInfo() {
   try {
     const response = await fetch("https://api.github.com/users/mateus-azevedo");
-    
+
     if (!response.ok) {
       throw new Error(
         `Error to fetch github profile informations. status code: ${response.status}`
       );
     }
 
-    const github = await response.json();    
+    const github = await response.json();
 
     return github;
   } catch (err) {
     console.error(
-     "The function fetchProfileGithubInfo didn't behave as expected. See the error details:",
+      "The function fetchProfileGithubInfo didn't behave as expected. See the error details:",
       err
     );
   }
@@ -60,16 +60,22 @@ async function fetchProfileGithubInfo() {
 
 /**
  * Retrieve essential information for profile picture
+ * @param {string} avatar_url expect a url with profile picture
+ * @param {string} name expect a string with name
  */
-const profilePicture = document.createElement("img");
-fetchProfileGithubInfo().then(github => {
-  profilePicture.src = github.avatar_url;
+function handleProfilePicture(avatar_url, name) {
+  const profilePictureContainer = document.getElementById(
+    "profile-picture-container"
+  );
+  const profilePicture = document.createElement("img");
+
+  profilePicture.src = avatar_url;
   profilePicture.className = "profile-picture";
-  profilePicture.alt = `${github.name} Profile Picture`
+  profilePicture.alt = `${name} Profile Picture`;
+
+  profilePictureContainer.appendChild(profilePicture);
+}
+
+fetchProfileGithubInfo().then((github) => {
+  handleProfilePicture(github.avatar_url, github.name);
 });
-
-const profilePictureContainer = document.getElementById(
-  "profile-picture-container"
-);
-profilePictureContainer.appendChild(profilePicture);
-
