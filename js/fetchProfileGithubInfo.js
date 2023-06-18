@@ -76,6 +76,26 @@ function handleProfilePicture(avatar_url, name) {
   profilePictureContainer.appendChild(profilePicture);
 }
 
+/**
+ * Retrieve nickname from GitHub
+ * @param {string} login is the GitHub account identifier. (e.g. \@mateus-azevedo, \@Dougls99 and \@Rhuan-Gonzaga)
+ * 
+ * Also used to access the GitHub profile URL (e.g. https://github.com/mateus-azevedo)
+ */
+function handleGithubNickname(login) {
+  const profilePictureContainer = document.getElementById(
+    "profile-picture-container"
+  );
+  const nickname = document.createElement("p");
+
+  nickname.textContent = `@${login}`;
+  nickname.className = "github-nickname";
+  nickname.alt = login;
+
+  profilePictureContainer.appendChild(nickname);
+}
+
 fetchProfileGithubInfo().then((github) => {
   handleProfilePicture(github.avatar_url, github.name);
+  handleGithubNickname(github.login);
 });
