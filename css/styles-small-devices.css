@@ -1,7 +1,10 @@
 /* Small devices such as large phones (640px and up) */
 @media only screen and (max-width: 40em) {
   #linktree-shape {
-    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   #profile-picture-container {
