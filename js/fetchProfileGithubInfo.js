@@ -77,6 +77,22 @@ function handleProfilePicture(avatar_url, name) {
 }
 
 /**
+ * Provides a dynamic favicon according to the GitHub image profile
+ * @param {string} avatar_url expect a url with profile picture
+ * 
+ * Implementation based on this guide:
+ * https://spemer.com/articles/set-favicon-with-javascript.html
+ */
+function handleFaviconPage(avatar_url) {
+  const headTag = document.querySelector('head');
+  const setFavicon = document.createElement('link');
+
+  setFavicon.setAttribute('rel', 'shortcut icon');
+  setFavicon.setAttribute('href', avatar_url);
+  headTag.appendChild(setFavicon);
+}
+
+/**
  * Retrieve nickname from GitHub
  * @param {string} login is the GitHub account identifier. (e.g. \@mateus-azevedo, \@Dougls99 and \@Rhuan-Gonzaga)
  * 
@@ -97,5 +113,6 @@ function handleGithubNickname(login) {
 
 fetchProfileGithubInfo().then((github) => {
   handleProfilePicture(github.avatar_url, github.name);
+  handleFaviconPage(github.avatar_url);
   handleGithubNickname(github.login);
 });
