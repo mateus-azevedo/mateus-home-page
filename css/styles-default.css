@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* linear-gradient config */
+body {
+  background: linear-gradient(-45deg, #216869, #49a078, #9cc5a1, #dce1de);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* linear-gradient config end */
+
+.social-link {
+  background-color: #ddd9ce;
+  color: black;
+}
+
+.github-nickname {
+  font-size: 1.2em;
+}

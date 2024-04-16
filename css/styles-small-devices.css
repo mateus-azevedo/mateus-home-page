@@ -1,0 +1,44 @@
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (max-width: 48em) {
+  #linktree-shape {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #profile-picture-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 1.5em;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+
+    margin-bottom: 0.5em;
+  }
+  
+  #social-hyperlinks-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social-link {
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 0.3em;
+    
+    margin-bottom: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    text-align: center;
+    font-size: 1.2em;
+  }
+}

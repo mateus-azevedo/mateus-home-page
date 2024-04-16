@@ -1,0 +1,52 @@
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 48em) {
+  body {
+    margin: auto;
+    margin-top: 23.7vh;
+    width: 50%;
+  }
+  
+  #linktree-shape {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(221, 217, 206, 0.2);
+    padding: 2em;
+    border-radius: 1em;
+  }
+  
+  #profile-picture-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 1.5em;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px; 
+
+    margin-bottom: 0.5em;
+  }
+  
+  #social-hyperlinks-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social-link {
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 0.3em;
+    
+    margin-bottom: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
